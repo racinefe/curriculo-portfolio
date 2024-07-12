@@ -33,7 +33,7 @@ export class ProjectsComponent {
       links: [
         {
           name: 'Conheça o Projeto',
-          href: 'https://github.com/racinefe/pagina-de-cadastro-CRUD',
+          href: 'https://sistema-d-matricula.netlify.app/',
         },
       ],
     },
@@ -51,7 +51,7 @@ export class ProjectsComponent {
       links: [
         {
           name: 'Conheça o Projeto',
-          href: 'https://github.com/racinefe/Lista-de-Tarefas',
+          href: 'https://pjlistadetarefas.netlify.app/'
         },
       ],
     },
@@ -63,13 +63,13 @@ export class ProjectsComponent {
       height:'91px',
       
       description: `<p>Projeto web, onde cumpri o desafio de construir um formulário de boletim informativo e fazê-lo parecer o mais próximo possível do design.</p>
-                    <p>O desafio foi retirado do Frontend Mentor: <a href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv" class="btn btn-primary">Pagina do desafio</a></p>
+                    <p>O desafio foi retirado do Frontend Mentor: <a href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv" target="_blank" class="btn btn-primary">Pagina do desafio</a></p>
                     <p>Tecnologias utilizadas - HTML| CSS |JavaScript | React | vite</p>
                    `,
       links: [
         {
           name: 'Conheça o Projeto',
-          href: 'https://github.com/racinefe/formulario-inscricao',
+          href: 'https://pjnewslettersign-up.netlify.app/',
                       
         },
         
@@ -90,7 +90,7 @@ export class ProjectsComponent {
       links: [
         {
           name: 'Conheça o Projeto',
-          href: 'https://github.com/racinefe/pokedex',
+          href: 'https://pjpokedex.netlify.app/',
         },
       ],
     },
@@ -110,7 +110,7 @@ export class ProjectsComponent {
       links: [
         {
           name: 'Conheça o Projeto',
-          href: 'https://qrcode-neon.vercel.app/',
+          href: 'https://pjqrcode.netlify.app/',
         },
       ],
     },
