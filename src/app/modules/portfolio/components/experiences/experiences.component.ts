@@ -15,16 +15,44 @@ export class ExperiencesComponent {
     {
       summary: {
         strong:"Front-end Developer",
-        p: "Frelancer | 2023 - Present",
+        p: "Freelance | 2023 - Presente",
       },
-      text:"<p>Desenvolvimento de pequenos projetos Web para pequenas empresas e projetos pessoaisO cliente é muito importante, o cliente será seguido pelo cliente. Agora a proteína está na frente da franja. Mas a urna com flechas. Quem são os membros da operadora inteligente? A companhia aérea quer pagar o preço dos imóveis. Aenean sagittis arcu vel mauris convallis e pellentesque lectus eleifend. Donec feugiat auctor leo, ullamcorper auctor elit euismod eu. </p>"
+      text:`
+            
+              <p>Como desenvolvedor front-end freelancer, tenho trabalhado em projetos de desenvolvimento web para pequenas empresas e em projetos pessoais.</p>
+              <br>
+              <p>Minha atuação envolve a criação de sites responsivos e otimizados, garantindo uma experiência de usuário agradável e funcional.</p>
+              <br>
+              <p>Principais responsabilidades e realizações:</p>
+              <br>
+              <p>- Desenvolvimento de interfaces web utilizando HTML, CSS, JavaScript, Angular e React.</p>
+              <p>- Personalização de estilos com SCSS para atender às necessidades específicas dos clientes.</p>
+              <p>- Implementação de ícones SVG e outras técnicas para aprimorar a interface do usuário.</p>
+              <p>- Colaboração com clientes para entender suas necessidades e fornecer soluções eficazes.</p>
+              <p>- Testes e depuração de código para assegurar a funcionalidade e desempenho dos projetos.</p>
+              <p> Durante este período, aprimorei minhas habilidades técnicas e de comunicação, sempre buscando entregar projetos de alta qualidade e atender às expectativas dos clientes.
+               Cada projeto é uma oportunidade de aprendizado e crescimento na minha carreira como desenvolvedor.<br></p>
+            
+           `
     },
     {
       summary: {
         strong:"Produção Audiovisual ",
-        p: "Prodigio Educação | Fev 2017 - Mar 2023"
+        p: "Prodígio Educação | Fev 2017 - Mar 2023"
       },
-      text:"<p>Durante meu periodo na Prodigio Educação atuei com diversos projetos e produção de aulas aovivos e conteudos para internet.O cliente é muito importante, o cliente será seguido pelo cliente. Agora a proteína está na frente da franja. Mas a urna com flechas. Quem são os membros da operadora inteligente? A companhia aérea quer pagar o preço dos imóveis. Aenean sagittis arcu vel mauris convallis e pellentesque lectus eleifend. Donec feugiat auctor leo, ullamcorper auctor elit euismod eu.  </p>"
+      text: `
+              <p> Durante meu período na Prodígio Educação participei diversos projetos de produção de aulas ao vivo e conteúdos para internet.</p>
+              <br>
+              <p> Minha atuação na Prodígio Educação estava na criação dos eventos e de garantir a qualidade na transmissão ao vivo.</p>
+              <br>
+              <p> Principais responsabilidades e realizações:</p>
+              <br>
+              <p>- Criação dos eventos de transmissão na plataforma.</p>
+              <p>- Transmissão com controle de corte e gravação através do sistema Vmix.</p>
+              <p>- Edição de vido.</p>
+              <p>- Montagem e preparação de set de gravação.</p>
+              
+              `
     },
     {
       summary: {
