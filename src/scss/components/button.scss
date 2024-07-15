@@ -6,8 +6,16 @@
     transition: 0.5s;
     cursor: pointer;
 
+    .icon {
+        width: 20px; /* Ajuste o tamanho conforme necessário */
+        height: 20px; /* Ajuste o tamanho conforme necessário */
+        margin-right: 8px; /* Espaço entre o ícone e o texto */
+        vertical-align: middle; /* Alinhar o ícone verticalmente com o texto */
+      }
+
     &.btn-primary,
-    &.btn-secondary {
+    &.btn-secondary,
+    &.btn-tertiary {
         padding: 10px;
         font-size: 16px;
         border-radius: 7px;
@@ -31,6 +39,15 @@
 
         &:hover {
             background: var(--secondary-10);
+        }
+    }
+
+    &.btn-tertiary {
+        color: var(--white);
+        background: var(--black-09);
+
+        &:hover {
+            background: var(--black-10);
         }
     }
     
