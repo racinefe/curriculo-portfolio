@@ -36,12 +36,17 @@
                 border: 2px solid var(--primary);
                 border-radius: 7px;
                 transition: 0.5s;
+                
                 &:hover {
-                    background: var(--primary);
+                    background:#0000007a;
+                    width: 105%;
+                    height: 105%;
+                    
                 }
             }
         }
     }
+    
 
     @media (max-width: 750px) {
         ul {
