@@ -20,12 +20,31 @@ export class ProjectsComponent {
   #dialog = inject(MatDialog)
   public arrayProjects = signal<IProjects[]>([
     {
+      src: 'assets/img/projects/InProgress.jpg',
+      alt: 'Projeto newpass-generator',
+      title: 'Newpass-Generator',
+      with: '110px',
+      height:'130px',
+      
+      description: `<img src="assets/img/projects/Projeto-newpass-generator.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
+                    <p>Em Construição...
+                    </p>
+                    <p>Tecnologias utilizadas - HTML| SCSS | TaypScript | Angular </p>
+                   `,
+      links: [
+        {
+          name: 'Conheça o Projeto',
+          href: 'https://newpass-generator.netlify.app/',
+        },
+      ],
+    },
+    {
       src: 'assets/img/projects/ProjetoCadastro.png',
       alt: 'Projeto Sistema de Matrícula',
       title: `Sistema de Matrícula`,
       with: '120px',
       height:'91px',
-      description: `<img src="assets/img/projects/ProjetoCadastro.png" class="img-custom-size" >
+      description: `<img src="assets/img/projects/ProjetoCadastro.png" alt='imagem do Projeto Sistema de Matrícula' class="img-custom-size" >
                     <p>Projeto Full Stack de matrícula, utilizando o Firebase como banco de dados para armazenamento,
                        o projeto possui todas as funcionalidades de um GRUD (create, read, update e delete).
                     </p>
@@ -45,7 +64,7 @@ export class ProjectsComponent {
       title: 'Lista de Tarefas',
       with: '120px',
       height:'91px',
-      description: `<img src="assets/img/projects/ProjetoToDoList.png" class="img-custom-size" >
+      description: `<img src="assets/img/projects/ProjetoToDoList.png" alt='imagem do Projeto Projeto Lista-de-Tarefas' class="img-custom-size" >
                     <p>Projeto web, onde criei um to-do list, o projeto possui todas as funcionalidades do GRUD (create, read, update e delete),
                        além de um checklist interativo.
                     </p>
@@ -65,7 +84,7 @@ export class ProjectsComponent {
       with: '120px',
       height:'91px',
       
-      description: `<img src="assets/img/projects/ProjetoMentor.png" class="img-custom-size" >
+      description: `<img src="assets/img/projects/ProjetoMentor.png" alt='imagem do Projeto Newsletter sign-up' class="img-custom-size" >
                     <p>Projeto web, onde cumpri o desafio de construir um formulário de boletim informativo e fazê-lo parecer o mais próximo possível do design.</p>
                     <p>O desafio foi retirado do Frontend Mentor: <a href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv" target="_blank" class="btn btn-primary">Pagina do desafio</a></p>
                     <p>Tecnologias utilizadas - HTML| CSS |JavaScript | React | vite</p>
@@ -86,7 +105,7 @@ export class ProjectsComponent {
       with: '120px',
       height:'91px',
       
-      description: `<img src="assets/img/projects/ProjetoPokedex.png" class="img-custom-size" >
+      description: `<img src="assets/img/projects/ProjetoPokedex.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
                     <p>Projeto web, onde criei um Pokédex interativo sendo possível pesquisar através do nome de um Pokémon ou do ID.
                        O projeto Foi utilizado para meu estudo sobre consumo de APIs.
                     </p>
@@ -106,7 +125,7 @@ export class ProjectsComponent {
       with: '110px',
       height:'130px',
       
-      description: `<img src="assets/img/projects/ProjetoQrCode.png" class="img-custom-size" >
+      description: `<img src="assets/img/projects/ProjetoQrCode.png"  alt='imagem do Projeto Gerador de QrCode' class="img-custom-size" >
                     <p>Projeto web, onde criei um Gerador de QR code interativo, sendo possível ao usuário digitar um link e a aplicação gera  um QR code correspondente na tela,
                        também tendo a possibilidade de baixado o QR gerado, como um arquivo de imagem.
                       O projeto Foi utilizado para meu estudo sobre consumo de API e utilização da biblioteca React.
