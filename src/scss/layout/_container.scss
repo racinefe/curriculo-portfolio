@@ -2,6 +2,7 @@
     width: 700px;
     position: relative;
     box-sizing: border-box;
+    
 }
 @media (max-width: 750px) {
     .container{
@@ -13,4 +14,4 @@
     width: 150px;  /* Defina a largura desejada */
     height: auto; /* A altura será ajustada automaticamente para manter a proporção da imagem */
     border-radius: 15px; /* Adiciona bordas arredondadas */
-  }
+}
