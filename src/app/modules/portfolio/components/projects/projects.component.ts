@@ -20,16 +20,21 @@ export class ProjectsComponent {
   #dialog = inject(MatDialog)
   public arrayProjects = signal<IProjects[]>([
     {
-      src: 'assets/img/projects/InProgress.jpg',
+      src: 'assets/img/projects/ProjetoGeradorSenha.png',
       alt: 'Projeto newpass-generator',
       title: 'Newpass-Generator',
       with: '110px',
       height:'130px',
       
-      description: `<img src="assets/img/projects/Projeto-newpass-generator.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
-                    <p>Em Construição...
+      description: `<img src="assets/img/projects/ProjetoGeradorSenha.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
+                    <img src="assets/img/projects/ProjetoGeradorSenha2.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
+                    <img src="assets/img/projects/ProjetoGeradorSenha3.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
+                    <p>
+                      Este projeto é uma aplicação web desenvolvida com Angular que inclui um gerador de senhas e uma barra de progresso personalizada.
+                       O gerador de senhas permite ao usuário gerar senhas fortes e copiá-las facilmente.
+                        A barra de progresso é estilizada utilizando SCSS e Bootstrap para proporcionar uma melhor experiência visual.
                     </p>
-                    <p>Tecnologias utilizadas - HTML| SCSS | TaypScript | Angular </p>
+                    <p>Tecnologias utilizadas - HTML| SCSS | BootStrap | Angular </p>
                    `,
       links: [
         {
