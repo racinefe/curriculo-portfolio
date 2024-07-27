@@ -46,13 +46,40 @@
             }
         }
     }
-    
+    .container{
+       // border: rgb(0, 255, 64) solid 3px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .list-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .container-cards{
+        //border: rgb(34, 0, 255) solid 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center!important;
+        width: 100%;
+        
+    }
+    .card {
+        margin-bottom: 20px;
+    }
 
     @media (max-width: 750px) {
         ul {
             li {
                 flex: 100%;
             }
+        }
+        .card {
+            margin: 0 auto;
+            margin-bottom: 20px;
         }
     }
 }
