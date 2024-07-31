@@ -99,6 +99,30 @@
       section figure {
         width: 100;
       }
+      mat-card{
+        width: 100%!important;
+      }
+     
+      
+    }
+    .containe{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .containe-card-apresentacao{
+      margin-bottom: 25px;
+      width: 50%;
+    }
+    .glass-effect {
+      background-color: var(--glass-bg-color);
+      border: var(--glass-border-width) solid var(--glass-border-color);
+      border-radius: 10px; 
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur)); /* Compatibilidade com Safari */
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.158);
     }
   }
   

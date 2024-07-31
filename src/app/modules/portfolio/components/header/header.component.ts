@@ -1,13 +1,18 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule,],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class HeaderComponent implements AfterViewInit {
+  longText = `Olá! Eu sou Racine Fellipe, um desenvolvedor de software, apaixonado por tecnologia e sempre em busca de aprender mais.
+              Minha jornada na programação começou recentemente, mas já adquiri conhecimento em várias áreas do desenvolvimento web e back-end.`;
   ngAfterViewInit() {
     this.startTypingAnimation();
   }
