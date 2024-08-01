@@ -1,15 +1,14 @@
-<div class="container">
+<div class="container-knoledge">
     <h2>Conhecimentos</h2>
     <ul>
         @for (item of arrayKnowledge(); track item) {
-            <li>
+            <li class="knoledge">
                 <img 
                     [src]="item.src"
                     [alt]="item.alt"
                     loading="lazy"
-                    width="22px"
-                    height="24px"
-                    
+                    width="32px"
+                    height="40px"
                 />
                 <mat-progress-bar mode="buffer" [value]="item.progress"></mat-progress-bar>
             </li>

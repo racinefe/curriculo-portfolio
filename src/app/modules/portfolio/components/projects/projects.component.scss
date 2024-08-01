@@ -70,6 +70,10 @@
     .card {
         margin-bottom: 20px;
     }
+    .btn{
+        display: flex;
+        flex-direction: column;
+    }
 
     @media (max-width: 750px) {
         ul {

@@ -54,12 +54,12 @@ export class ExperiencesComponent {
               
               `
     },
-    {
-      summary: {
-        strong:"",
-        p: ""
-      },
-      text:""
-    },
+    // {
+    //   summary: {
+    //     strong:"",
+    //     p: ""
+    //   },
+    //   text:""
+    // },
   ])
 }

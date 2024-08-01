@@ -19,22 +19,21 @@
 <div class="container-cards">
     <h2>Projetos Desenvolvidos</h2>
     <div class=" container ">
-    <li>
-        <div class="list-cards row">
-            @for (item of arrayProjects(); track item) {
+        <li>
+            <div class="list-cards row">
+                @for (item of arrayProjects(); track item) {
                 <div class="card col-6 col-sm-4" style="width: 18rem;">
-                    <img class="card-img-top" [src]="item.src" [alt]="item.alt" [attr.width]="item.with"
-                        [attr.height]="item.height" loading="lazy" />
+                    <button class="btn" (click)="openDialog(item)">
+                        <img class="card-img-top" [src]="item.src" [alt]="item.alt" [attr.width]="item.with"
+                            [attr.height]="item.height" loading="lazy" />
 
-                    <div class="card-body">
-                        <h3 class="card-title">{{ item.title }}</h3>
-                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                        <button class="btn btn-primary" (click)="openDialog(item)">Conheça o Projeto</button>
-
-                    </div>
+                        <div class="card-body">
+                            <h2 class="card-title">{{ item.title }}</h2>
+                        </div>
+                    </button>
                 </div>
-            }
-        </div>
-    </li>
-</div>
+                }
+            </div>
+        </li>
+    </div>
 </div>
