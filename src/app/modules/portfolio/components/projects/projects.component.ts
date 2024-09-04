@@ -136,7 +136,6 @@ export class ProjectsComponent {
         
       ],
     },
-    
     {
       src: 'assets/img/projects/ProjetoQrCode/ProjetoQrCode.gif',
       alt: 'Projeto Gerador de QrCode',
@@ -162,9 +161,29 @@ export class ProjectsComponent {
         },
       ],
     },
-    
-    
-   
+    {
+      src: 'assets/img/projects/Perguntas.Dev/Perguntas.Dev.gif',
+      alt: 'Projeto Perguntas.Dev',
+      title: 'Perguntas.Dev',
+      with: '200px',
+      height:'130px',
+      
+      description: `<img src="assets/img/projects/Perguntas.Dev/Perguntas.Dev.png"  alt='imagem do Projeto Perguntas.Dev' class="img-custom-size" >
+      <img src="assets/img/projects/Perguntas.Dev/Perguntas.Dev.gif"  alt='imagem do Projeto Perguntas.Dev' class="img-custom-size" >
+                                   
+                    <p>O aplicativo é um quiz em Flutter que permite ao usuário escolher um tema e responder a perguntas relacionadas a esse tema.
+                     Ele é composto por três partes principais: a tela inicial (HomePage), a lógica de controle do quiz (_PerguntaAppState),
+                      e as telas de exibição das perguntas e resultados (Questionario e Resultado).
+                    </p>
+                    <p>Tecnologias utilizadas - Flutter | Dart</p>
+                   `,
+      links: [
+        {
+          name: 'Conheça o Projeto',
+          href: 'https://github.com/racinefe/Perguntas.Dev',
+        },
+      ],
+    },   
   ]);
 
   public openDialog(data: IProjects){
