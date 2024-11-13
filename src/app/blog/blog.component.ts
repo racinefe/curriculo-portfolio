@@ -49,7 +49,7 @@ export class BlogComponent {
             <br>
             <h3>1. Dimensões Fixas ou Flexíveis:</h3>
             <p>Você pode definir tamanhos fixos, como em pixels, ou usar tamanhos flexíveis, 
-                como porcentagens ou a unidade "fr", 
+                como porcentagens ou a unidade <code>"fr"</code>, 
                 que se adapta ao espaço disponível.
             </p>
             <h3>2. Grids Adicionais:</h3>
@@ -76,7 +76,34 @@ export class BlogComponent {
                 Combinando o CSS Grid com outras ferramentas, como o Flexbox, 
                 dá pra criar layouts incríveis e complexos que antes eram impossíveis só com CSS. 
                 Tudo começa criando um grid dentro de um container!
-            </p> 
+            </p>
+            <br>
+            <h2>Grid container</h2>
+            <p>
+              Cria-se um grid container com as declarações CSS <code>display: grid</code> ou <code>display: inline-grid</code> para um elemento da marcação.
+               Assim declarando, todos os elementos filhos diretos daquele container se transformam em grid items.
+            </p>
+            <br>
+            <p>Aqui está um exemplo simples:</P>
+            <br>
+            <h3>HTML</h3>
+              <h2>Exemplo de código:</h2>
+              <pre><code>
+              < div class="wrapper">
+                < div>One</div>
+                < div>Two</div>
+                < div>Three</div>
+                < div>Four</div>
+                < div>Five</div>
+              < /div>
+
+              .wrapper {
+                display: grid;
+              }
+              </code></pre>
+
+
+            
             
           `
     },
