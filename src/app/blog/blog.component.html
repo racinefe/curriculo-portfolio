@@ -1,0 +1,18 @@
+<!-- Link para retornar à página inicial -->
+<a class="btn-home-portfolio" [routerLink]="['/']" >Voltar ao Portfólio</a>
+ <!-- Conteúdo do blog -->
+<div class="blog-content">
+    <h1>Artigos básicos para estudo</h1>
+    @for (item of arrayBlog(); track item) {
+        <details>
+            <summary>
+                <p>
+                    <strong> {{item.summary.strong}} </strong>
+                    {{item.summary.p}}
+                </p>
+            </summary>
+            <article [innerHTML]="item.text"></article>
+        </details>
+    }
+
+</div>
