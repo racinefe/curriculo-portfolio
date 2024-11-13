@@ -51,7 +51,7 @@
         &[open]{
             summary {
                 &::after {
-                    background-image: url("../../../../../assets/icons/chevron-up.svg");
+                    background-image: url("../../assets/icons/chevron-up.svg");
                     margin-top: 5px;
                 }
 
@@ -62,7 +62,7 @@
         &:not([open]){
             summary {
                 &::after {
-                    background-image: url("../../../../../assets/icons/chevron-down.svg");
+                    background-image: url("../../assets/icons/chevron-down.svg");
                     margin-top: 5px;
                 }
 
