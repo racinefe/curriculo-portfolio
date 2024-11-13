@@ -84,26 +84,38 @@ export class BlogComponent {
                Assim declarando, todos os elementos filhos diretos daquele container se transformam em grid items.
             </p>
             <br>
-            <p>Aqui está um exemplo simples:</P>
-            <br>
-            <h3>HTML</h3>
-              <h2>Exemplo de código:</h2>
+              <h3>Exemplo de código:</h3>
+              <p>Aqui está um exemplo simples.</P>
+              <h2>HTML</h2>
               <pre><code>
-              < div class="wrapper">
-                < div>One</div>
-                < div>Two</div>
-                < div>Three</div>
-                < div>Four</div>
-                < div>Five</div>
-              < /div>
-
-              .wrapper {
-                display: grid;
-              }
+                  < div class="wrapper" >
+                    < div > Exemplo 01 < /div >
+                    < div > Exemplo 02 < /div >
+                    < div > Exemplo 03 < /div >
+                    < div > Exemplo 04 < /div >
+                    < div > Exemplo 05 < /div >
+                  < /div >
               </code></pre>
-
-
-            
+              <h2>CSS</h2>
+              <pre><code>
+                .wrapper {
+                  display: grid;
+                }
+                .wrapper > div {
+                  border: 2px solid #ffa94d;
+                  border-radius: 5px;
+                  background-color: #ffd8a8;
+                  padding: 1em;
+                  color: #d9480f;
+                }
+              </code></pre>
+            <br>
+            <p>
+              Depois de fazer isso, todos os filhos diretos da div.wrapper se tornam grid items. 
+              Se você olhar no navegador, não vai ver diferença, porque, por padrão, 
+              o Grid cria uma única coluna para acomodar os itens.
+            </p>     
+            <img src="assets/img/img-gridEx.png"  alt='imagem do grid de exemplo' class="img-custom" >        
             
           `
     },
