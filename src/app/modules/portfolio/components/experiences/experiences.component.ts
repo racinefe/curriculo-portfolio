@@ -18,7 +18,7 @@ export class ExperiencesComponent {
         p: "Freelance | 2023 - Presente",
       },
       text:`
-            
+
               <p>Como desenvolvedor front-end freelancer, tenho trabalhado em projetos de desenvolvimento web para pequenas empresas e em projetos pessoais.</p>
               <br>
               <p>Minha atuação envolve a criação de sites responsivos e otimizados, garantindo uma experiência de usuário agradável e funcional.</p>
@@ -32,7 +32,7 @@ export class ExperiencesComponent {
               <p>- Testes e depuração de código para assegurar a funcionalidade e desempenho dos projetos.</p>
               <p> Durante este período, aprimorei minhas habilidades técnicas e de comunicação, sempre buscando entregar projetos de alta qualidade e atender às expectativas dos clientes.
                Cada projeto é uma oportunidade de aprendizado e crescimento na minha carreira como desenvolvedor.<br></p>
-            
+
            `
     },
     {
@@ -49,9 +49,9 @@ export class ExperiencesComponent {
               <br>
               <p>- Criação dos eventos de transmissão na plataforma.</p>
               <p>- Transmissão com controle de corte e gravação através do sistema Vmix.</p>
-              <p>- Edição de vido.</p>
+              <p>- Edição de vídeo.</p>
               <p>- Montagem e preparação de set de gravação.</p>
-              
+
               `
     },
     // {

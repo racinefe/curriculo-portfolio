@@ -1,81 +1,111 @@
 :host {
-    margin-top: 25px;
+  margin: 25px auto 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 900px;
+  padding: 0 20px;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 100px;
-    h2 {
-        text-align: center;
-        margin: 0 0 25px 0;
-    }
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+}
 
-    details {
-        overflow: hidden;
-        margin-top: 10px;
-        background: var(--black-10);
-        border-radius: 7px;
-        
+details {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
 
-        summary,
-        article {
-            padding: 10px 20px;
-            transition: 500ms; 
-        }
+summary,
+article {
+  padding: 15px 20px;
+  transition: 500ms;
+}
 
-        summary {
-            cursor: pointer;
+summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+}
 
-            background: var(--primary);
+summary:hover {
+  background: darkgray;
+  color: aliceblue;
+}
 
-            p {
-                font-size: 14px;
-                color: var(--black-10);
+summary p {
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-                padding: 0;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-                
-            }
-            &::after {
-                content: "";
-                display: inline-block;
-                width: 1em;  /* Ajuste conforme necessário */
-                height: 1em; /* Ajuste conforme necessário */
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-            }
-        }
-        &[open]{
-            summary {
-                &::after {
-                    background-image: url("../../../../../assets/icons/chevron-up.svg");
-                    margin-top: 5px;
-                }
+details[open] summary::after {
+  background-image: url("../../../../../assets/icons/chevron-up.svg");
+}
 
-                
-                border-radius: 7px 7px 0 0;
-            }
-        }
-        &:not([open]){
-            summary {
-                &::after {
-                    background-image: url("../../../../../assets/icons/chevron-down.svg");
-                    margin-top: 5px;
-                }
+details:not([open]) summary::after {
+  background-image: url("../../../../../assets/icons/chevron-down.svg");
+}
+article{
+  text-align: left;
+}
 
-                
-            }
-        }
-    }
+/* Responsividade */
+@media (max-width: 768px) {
+  :host {
+    padding: 0 15px;
+  }
 
+  h2 {
+    font-size: 1.8rem;
+  }
 
+  details {
+    max-width: 100%;
+  }
+
+  summary {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  summary {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
 }

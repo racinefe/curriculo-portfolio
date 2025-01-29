@@ -1,32 +1,101 @@
-:host {
-    margin-top: 25px;
-    padding: 100px 0;
-    background: var(--black-10);
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    h2 {
-      text-align: center;
-      margin: 0;
-    }
-  
-    .container-knoledge {
-      width: 50%;
-      padding: 20px;
-      //border: red solid 3px;
-    }
-    .knoledge{
-      //border: rgb(0, 26, 255) solid 3px;
-      margin-bottom: 25px;
-    }
-    @media (max-width: 750px) {
-      .container-knoledge {
-        width: 100%;
-        
-      }
-    }
+.container-knoledge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  //max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.container-knoledge h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container-knoledge ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os itens */
+  list-style: none;
+  padding: 0;
+}
+
+.knoledge {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(112, 111, 111, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  width: 100vh; /* Largura fixa para cada item */
+  text-align: center;
+}
+
+.knoledge img {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.knoledge img:hover {
+  transform: scale(1.1);
+}
+
+mat-progress-bar {
+  width: 100%; /* Garante que a barra de progresso ocupe toda a largura do item */
+  height: 6px;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-knoledge {
+    padding: 30px 15px;
   }
-  
+
+  .container-knoledge h2 {
+    font-size: 1.8rem;
+  }
+
+  .knoledge {
+    width: 100px;
+    padding: 10px;
+  }
+
+  .knoledge img {
+    width: 28px;
+    height: 35px;
+  }
+
+  mat-progress-bar {
+    height: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-knoledge h2 {
+    font-size: 1.5rem;
+  }
+
+  .knoledge {
+    width: 90px;
+    padding: 8px;
+  }
+
+  .knoledge img {
+    width: 25px;
+    height: 32px;
+  }
+
+  mat-progress-bar {
+    height: 4px;
+  }
+}

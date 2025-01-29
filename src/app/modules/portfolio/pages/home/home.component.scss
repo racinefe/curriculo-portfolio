@@ -1,13 +1,102 @@
-:host {
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%,  rgb(189, 189, 189) 100%);
+}
 
-        padding: 20px 0;
-        text-align: center;
-    }
-    
-    
-    
+.wrapper .content {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+  padding: 64px 16px 32px;
+  display: flex;
+  flex-wrap: wrap; /* Permite quebra de linha em dispositivos menores */
+  justify-content: center; /* Alinha o conteúdo centralizado */
+}
+
+.wrapper .glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px 0px 0px 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  flex: 1; /* Permite ajuste automático para diferentes tamanhos */
+  min-width: 300px; /* Garante que não fique muito pequeno */
+}
+
+.wrapper nav {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap; /* Quebra itens para telas menores */
+}
+
+.wrapper a {
+  color: rgb(104, 104, 104);
+  font-size: 14px; /* Ajusta tamanho da fonte */
+
+}
+
+.wrapper footer {
+  padding: 24px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .wrapper .content {
+    flex-direction: column; /* Empilha o conteúdo em dispositivos menores */
+    align-items: center;
+  }
+
+  .wrapper .glass-effect {
+    border-radius: 20px; /* Ajusta o design para dispositivos menores */
+    padding: 15px;
+    margin-top: 15px;
+    max-width: 90%; /* Reduz a largura em telas menores */
+  }
+
+  .wrapper nav {
+
+    justify-content: space-between;
+  }
+
+  .wrapper nav a {
+
+    font-size: 12px; /* Reduz o tamanho da fonte */
+    margin: 8px 0; /* Adiciona espaçamento entre links */
+  }
+
+  .wrapper footer {
+    font-size: 10px; /* Ajusta o tamanho da fonte */
+    padding: 16px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper .glass-effect {
+    border-radius: 10px; /* Simplifica o design para telas muito pequenas */
+    padding: 10px;
+  }
+
+  .wrapper nav a {
+    font-size: 10px; /* Fonte ainda menor para se adaptar a telas pequenas */
+  }
+
+  .wrapper footer {
+    font-size: 8px; /* Reduz mais a fonte no rodapé */
+  }
 }

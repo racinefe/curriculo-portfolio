@@ -12,18 +12,18 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class HeaderComponent implements AfterViewInit {
   longText = `Olá! Eu sou Racine Fellipe, um desenvolvedor de software, apaixonado por tecnologia e sempre em busca de aprender mais.
-              Minha jornada na programação começou recentemente, mas já adquiri conhecimento em várias áreas do desenvolvimento web e back-end.`;
+              Minha jornada na programação começou recentemente, mas já adquiri conhecimento em várias áreas do desenvolvimento Font-end e back-end.`;
   ngAfterViewInit() {
     this.startTypingAnimation();
   }
 
   startTypingAnimation() {
     const nameElement = document.querySelector<HTMLElement>('.animated-name');
-    
+
     if (nameElement) {
-      const fullName = 'Racine Fellipe';
-      const originalText = fullName.split(' ')[1] + ' </>'; // Acrescentar texto depois de 'Fellipe'
-      nameElement.textContent = fullName.split(' ')[0] + ' '; // Acrescentar texto depois de 'Racine '
+      const fullName = ' ';
+      const originalText = fullName.split(' ')[1] + 'Software Developer</>'; // Acrescentar texto depois de 'Fellipe'
+      nameElement.textContent = fullName.split('')[0] + ' Olá, eu Sou Racine Felipe, '; // Acrescentar texto depois de 'Racine '
 
       let currentIndex = 0;
 

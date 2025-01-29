@@ -1,37 +1,42 @@
-<main>
-    <nav id="navbar-example2" class="navbar navbar-expand-lg bg-body-tertiary px-3 mb-3 fixed-top">
-        <a class="navbar-brand" style="color:  var( --white);" href="#">Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: var(--white);">
-            <span class="navbar-toggler-icon"></span>
+<div class="wrapper">
+  <header></header>
+  <main>
+    <div class="content">
+      <nav id="navbar-example2" class="navbar navbar-expand-lg  navbar-light px-3 mb-3 fixed-top glass-effect" >
+        <a class="navbar-brand"  href="#">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse"id="navbarNav">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading1">Apresentação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading2">Conhecimentos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading3">Experiências</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#scrollspyHeading4">Projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/blog']">Blog</a>
-                </li>
-                <!-- <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu">
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-                    </ul>
-                </li> -->
-            </ul>
-        </div>    
-    </nav>
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2 " tabindex="0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyHeading1">Apresentação</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyHeading2">Conhecimentos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyHeading3">Experiências</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyHeading4">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/blog']">Blog</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                      <ul class="dropdown-menu">
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                      </ul>
+                  </li> -->
+          </ul>
+        </div>
+      </nav>
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example  p-3 rounded-2 " tabindex="0">
         <h4 id="scrollspyHeading1"></h4>
         <app-header />
         <h4 id="scrollspyHeading2"></h4>
@@ -39,8 +44,11 @@
         <h4 id="scrollspyHeading3"></h4>
         <app-experiences />
         <h4 id="scrollspyHeading4"></h4>
-        <app-projects/>
+        <app-projects />
         <!-- <h4 id="scrollspyHeading5">Fifth heading</h4>
         <p>...</p> -->
+      </div>
     </div>
-</main>  
+  </main>
+  <footer>Desenvolvido por Racine Fellipe</footer>
+</div>

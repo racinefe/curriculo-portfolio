@@ -1,66 +1,74 @@
-::ng-deep .dialog-container-projects .mdc-dialog__container{
-    width: 850px;
-    transition: 0.5s;
-    
-    &:hover {
-        transform: scale(1.2);
-        transition: 0.5s;
-        
-    }
-    
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
 }
 
-:host{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    header, h3, p, a, mat-dialog-content{
-        padding: 0;
-        margin: 0 0 15px;
-        
-    }
-    
-
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-
-        h2{
-            font-size: 22px;
-            padding: 0;
-            margin: 0;
-            color: var(--black-10);
-        }
-
-        button{
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-        }
-    }
-
-    h3{
-        font-size: 18px;
-        color: var(--black-10);
-    }
-
-    article{
-        margin-bottom: 15px;
-
-        p{
-            font-size: 16px;
-        }
-        
-       
-    }
-    
-
-    nav{
-        display: flex;
-    }
-
-   
+header h2 {
+  font-size: 1.5rem;
+  margin: 0;
 }
+
+button {
+  background-color: rgb(184, 175, 175);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(150, 145, 145);
+}
+
+button img {
+  width: 24px;
+  height: 24px;
+}
+
+mat-dialog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+article {
+  font-size: 1rem;
+  line-height: 1.5;
+
+
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+

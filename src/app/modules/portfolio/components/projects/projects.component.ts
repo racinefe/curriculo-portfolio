@@ -25,10 +25,8 @@ export class ProjectsComponent {
       title: 'Newpass-Generator',
       with: '150px',
       height:'150px',
-      
-      description: `<img src="assets/img/projects/ProjetoGeradorSenha/ProjetoGeradorSenha.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoGeradorSenha/ProjetoGeradorSenha2.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoGeradorSenha/ProjetoGeradorSenha3.png" alt='imágem do Projeto newpass-generator' class="img-custom-size" >
+
+      description: `
                     <p>
                       Este projeto é uma aplicação web desenvolvida com Angular que inclui um gerador de senhas e uma barra de progresso personalizada.
                        O gerador de senhas permite ao usuário gerar senhas fortes e copiá-las facilmente.
@@ -47,16 +45,13 @@ export class ProjectsComponent {
       src: 'assets/img/projects/ProjetoCadastro/ProjetoCadastro.gif',
       alt: 'Projeto Sistema de Matrícula',
       title: `Sistema de Matrícula`,
-      with: '200px',
+      with: '100px',
       height:'130px',
-      description: `<img src="assets/img/projects/ProjetoCadastro/ProjetoCadastro.png" alt='imagem do Projeto Sistema de Matrícula' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoCadastro/ProjetoCadastro2.png" alt='imagem do Projeto Sistema de Matrícula' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoCadastro/ProjetoCadastro3.png" alt='imagem do Projeto Sistema de Matrícula' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoCadastro/ProjetoCadastro5.png" alt='imagem do Projeto Sistema de Matrícula' class="img-custom-size" >
+      description: `
                     <p>Projeto Full Stack de matrícula, utilizando o Firebase como banco de dados para armazenamento,
                        o projeto possui todas as funcionalidades de um GRUD (create, read, update e delete).
                     </p>
-                    
+
                     <p>Tecnologias utilizadas - HTML| CSS |JavaScript | React.js | Vite | Node.js</p>
                    `,
       links: [
@@ -72,10 +67,7 @@ export class ProjectsComponent {
       title: 'Lista de Tarefas',
       with: '230px',
       height:'130px',
-      description: `<img src="assets/img/projects/ProjetoToDoList/ProjetoToDoList.png" alt='imagem do Projeto Projeto Lista-de-Tarefas' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoToDoList/ProjetoToDoList2.png" alt='imagem do Projeto Projeto Lista-de-Tarefas' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoToDoList/ProjetoToDoList3.png" alt='imagem do Projeto Projeto Lista-de-Tarefas' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoToDoList/ProjetoToDoList6.png" alt='imagem do Projeto Projeto Lista-de-Tarefas' class="img-custom-size" >
+      description: `
                     <p>Projeto web, onde criei um to-do list, o projeto possui todas as funcionalidades do GRUD (create, read, update e delete),
                        além de um checklist interativo.
                     </p>
@@ -94,12 +86,8 @@ export class ProjectsComponent {
       title: 'Pokédex',
       with: '200px',
       height:'130px',
-      
-      description: `<img src="assets/img/projects/ProjetoPokedex/ProjetoPokedex1.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoPokedex/ProjetoPokedex2.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoPokedex/ProjetoPokedex3.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoPokedex/ProjetoPokedex4.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoPokedex/ProjetoPokedex7.png" alt='imagem do Projeto Pokédex' class="img-custom-size" >
+
+      description: `
                     <p>Projeto web, onde criei um Pokédex interativo sendo possível pesquisar através do nome de um Pokémon ou do ID.
                        O projeto Foi utilizado para meu estudo sobre consumo de APIs.
                     </p>
@@ -118,10 +106,8 @@ export class ProjectsComponent {
       title: 'Newsletter sign-up',
       with: '200px',
       height:'130px',
-      
-      description: `<img src="assets/img/projects/ProjetoMentor/ProjetoMentor1.png" alt='imagem do Projeto Newsletter sign-up' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoMentor/ProjetoMentor2.png" alt='imagem do Projeto Newsletter sign-up' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoMentor/ProjetoMentor3.png" alt='imagem do Projeto Newsletter sign-up' class="img-custom-size" >
+
+      description: `
 
                     <p>Projeto web, onde cumpri o desafio de construir um formulário de boletim informativo e fazê-lo parecer o mais próximo possível do design.</p>
                     <p>O desafio foi retirado do Frontend Mentor: <a href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv" target="_blank" class="btn btn-primary">Pagina do desafio</a></p>
@@ -131,9 +117,9 @@ export class ProjectsComponent {
         {
           name: 'Conheça o Projeto',
           href: 'https://pjnewslettersign-up.netlify.app/',
-                      
+
         },
-        
+
       ],
     },
     {
@@ -142,12 +128,9 @@ export class ProjectsComponent {
       title: 'Gerador de QrCode',
       with: '200px',
       height:'130px',
-      
-      description: `<img src="assets/img/projects/ProjetoQrCode/ProjetoQrCode2.png"  alt='imagem do Projeto Gerador de QrCode' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoQrCode/ProjetoQrCode3.png"  alt='imagem do Projeto Gerador de QrCode' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoQrCode/ProjetoQrCode5.png"  alt='imagem do Projeto Gerador de QrCode' class="img-custom-size" >
-                    <img src="assets/img/projects/ProjetoQrCode/ProjetoQrCode6.png"  alt='imagem do Projeto Gerador de QrCode' class="img-custom-size" >
-                    
+
+      description: `
+
                     <p>Projeto web, onde criei um Gerador de QR code interativo, sendo possível ao usuário digitar um link e a aplicação gera  um QR code correspondente na tela,
                        também tendo a possibilidade de baixado o QR gerado, como um arquivo de imagem.
                       O projeto Foi utilizado para meu estudo sobre consumo de API e utilização da biblioteca React.
@@ -167,10 +150,9 @@ export class ProjectsComponent {
       title: 'Perguntas.Dev',
       with: '200px',
       height:'130px',
-      
-      description: `<img src="assets/img/projects/Perguntas.Dev/Perguntas.Dev.png"  alt='imagem do Projeto Perguntas.Dev' class="img-custom-size" >
-      <img src="assets/img/projects/Perguntas.Dev/Perguntas.Dev.gif"  alt='imagem do Projeto Perguntas.Dev' class="img-custom-size" >
-                                   
+
+      description: `
+
                     <p>O aplicativo é um quiz em Flutter que permite ao usuário escolher um tema e responder a perguntas relacionadas a esse tema.
                      Ele é composto por três partes principais: a tela inicial (HomePage), a lógica de controle do quiz (_PerguntaAppState),
                       e as telas de exibição das perguntas e resultados (Questionario e Resultado).
@@ -183,7 +165,7 @@ export class ProjectsComponent {
           href: 'https://github.com/racinefe/Perguntas.Dev',
         },
       ],
-    },   
+    },
   ]);
 
   public openDialog(data: IProjects){
