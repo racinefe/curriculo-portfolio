@@ -47,7 +47,7 @@ export class HeaderComponent implements AfterViewInit {
         }
       };
 
-      // Começa a animação de digitação
+
       type();
     }
   }
