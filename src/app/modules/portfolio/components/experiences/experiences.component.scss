@@ -1,3 +1,11 @@
+// Variáveis para reutilização
+$primary: #4299e1;
+$gray-dark: #2d3748;
+$gray: #4a5568;
+$gray-light: #718096;
+$line: #e2e8f0;
+$bg-light: #f8fafc;
+
 .experiences-section {
   max-width: 1200px;
   margin: 4rem auto;
@@ -10,7 +18,7 @@
     .section-title {
       font-size: 2rem;
       font-weight: 700;
-      color: #2d3748;
+      color: $gray-dark;
       margin-bottom: 0.5rem;
       position: relative;
       display: inline-block;
@@ -23,13 +31,13 @@
         transform: translateX(-50%);
         width: 80px;
         height: 3px;
-        background: #4299e1;
+        background: $primary;
         border-radius: 3px;
       }
     }
 
     .section-subtitle {
-      color: #4a5568;
+      color: $gray;
       font-size: 1rem;
       margin-top: 0.5rem;
     }
@@ -54,11 +62,11 @@
           width: 24px;
           height: 24px;
           border-radius: 50%;
-          background: #4299e1;
+          background: $primary;
           border: 4px solid white;
-          box-shadow: 0 0 0 2px #4299e1;
-          z-index: 1;
+          box-shadow: 0 0 0 2px $primary;
           position: relative;
+          z-index: 1;
         }
 
         .timeline-line {
@@ -67,7 +75,7 @@
           top: 24px;
           bottom: -2rem;
           width: 2px;
-          background: #e2e8f0;
+          background: $line;
           transform: translateX(-50%);
         }
       }
@@ -81,10 +89,10 @@
           border-radius: 12px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
           overflow: hidden;
-          transition: all 0.3s ease;
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
 
           &:hover {
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
             transform: translateY(-2px);
           }
 
@@ -93,13 +101,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem;
+            background: $bg-light;
             cursor: pointer;
-            background: #f8fafc;
 
             .job-title {
               font-size: 1.25rem;
               font-weight: 600;
-              color: #2d3748;
+              color: $gray-dark;
               margin: 0;
             }
 
@@ -109,12 +117,12 @@
 
               .company {
                 font-weight: 500;
-                color: #4a5568;
+                color: $gray;
               }
 
               .date {
                 font-size: 0.9rem;
-                color: #718096;
+                color: $gray-light;
               }
             }
 
@@ -122,7 +130,7 @@
               transition: transform 0.3s ease;
 
               svg {
-                color: #4a5568;
+                color: $gray;
               }
             }
           }
@@ -135,8 +143,9 @@
             .experience-text {
               padding: 0 1.5rem;
 
-              p, ul {
-                color: #4a5568;
+              p,
+              ul {
+                color: $gray;
                 line-height: 1.6;
               }
 
@@ -150,7 +159,7 @@
 
                   &::before {
                     content: '•';
-                    color: #4299e1;
+                    color: $primary;
                     font-weight: bold;
                     display: inline-block;
                     width: 1em;
@@ -162,10 +171,8 @@
           }
 
           &.active {
-            .experience-header {
-              .toggle-icon {
-                transform: rotate(180deg);
-              }
+            .toggle-icon {
+              transform: rotate(180deg);
             }
 
             .experience-details {
@@ -184,37 +191,35 @@
     padding: 0 1rem;
     margin: 2rem auto;
 
-    .timeline {
-      .timeline-item {
-        flex-direction: column;
+    .timeline-item {
+      flex-direction: column;
 
-        .timeline-marker {
-          width: 100%;
-          margin-right: 0;
-          margin-bottom: 1rem;
-          display: flex;
-          align-items: center;
+      .timeline-marker {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
 
-          .timeline-dot {
-            margin-right: 1rem;
-          }
-
-          .timeline-line {
-            display: none;
-          }
+        .timeline-dot {
+          margin-right: 1rem;
         }
 
-        .timeline-content {
-          padding-bottom: 0;
+        .timeline-line {
+          display: none;
+        }
+      }
 
-          .experience-card {
-            .experience-header {
-              flex-wrap: wrap;
-              gap: 0.5rem;
+      .timeline-content {
+        padding-bottom: 0;
 
-              .job-title {
-                width: 100%;
-              }
+        .experience-card {
+          .experience-header {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            .job-title {
+              width: 100%;
             }
           }
         }
