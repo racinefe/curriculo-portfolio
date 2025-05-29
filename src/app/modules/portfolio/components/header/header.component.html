@@ -1,56 +1,65 @@
-<header>
-    <img src="https://avatars.githubusercontent.com/u/102471647?v=4" alt="Racine - Foto de Perfil" width="190px" height="190px" loading="eager" />
-    <h1><span class="animated-name teste"></span></h1>
-</header>
+<header class="modern-header">
+  <div class="profile-section">
+    <img src="https://avatars.githubusercontent.com/u/102471647?v=4"
+         alt="Racine - Foto de Perfil"
+         class="profile-image"
+         loading="eager" />
+  </div>
 
-<aside>
-    <div class="containe">
-
-                <div class="box-info glass-effect">
-                    <p>Rio de Janeiro, Brasil</p>
-
-                    <p>{{longText}}</p>
-                    <nav>
-                        <ul>
-                            <li class="glass-effect">
-                                <a href="assets/pdf/cv.pdf" target="_blank">
-                                    <img src="assets/icons/botoes/dowload-icon.svg" alt="Download Icon" class="icon"> Currículo
-                                </a>
-                            </li>
-                            <li class="glass-effect">
-                                <a href="https://www.linkedin.com/in/racinefellipe/" target="_blank">
-                                    <img src="assets/icons/botoes/linkedin-icon.svg" alt="LinkedIn Icon" class="icon"> LinkedIn
-                                </a>
-                            </li>
-                            <li class="glass-effect">
-                                <a href="https://github.com/racinefe" target="_blank" >
-                                    <img src="assets/icons/botoes/github-icon.svg" alt="GitHub Icon" class="icon"> GitHub
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-        <section>
-            <figure>
-                <img src="assets/icons/whathsapp.svg" alt="Ícone para o WhatsApp" width="22px" height="24px" />
-                <figcaption>
-                    <a href="https://api.whatsapp.com/send?phone=5521973500716&text=ol%c3%A1%20Racine, %20Eu%20Sou%20"
-                        target="_blank">
-                        <strong>Envie uma mensagem para:</strong>
-                        <p>WhatsApp: (21) 9 7350-0716</p>
-                    </a>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/icons/email.svg" alt="Ícone para o e-mail" width="22px" height="24px" />
-                <figcaption>
-                    <a href="mailto:racine.fell@gmail.com" target="_blank">
-                        <strong>Envie uma e-mail para:</strong>
-                        <p>racine.fell&#64;gmail.com</p>
-                    </a>
-                </figcaption>
-            </figure>
-        </section>
+  <div class="info-section">
+    <div class="text-content">
+      <h1 class="animated-name"></h1>
+      <p class="location">📍 Rio de Janeiro, Brasil <img src="assets/icons/mug-hot-solid.svg" alt="Cafézin Icon" class="icon2"></p>
+      <p class="bio">{{longText}}</p>
     </div>
-</aside>
+
+    <div class="buttons-section">
+      <nav>
+        <ul class="button-grid">
+          <li>
+            <a href="assets/pdf/cv.pdf" target="_blank" class="modern-button">
+              <img src="assets/icons/botoes/down-solid.svg" alt="Download Icon" class="icon">
+              <span>Currículo</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/racinefellipe/" target="_blank" class="modern-button">
+              <img src="assets/icons/botoes/linkedin-brands.svg" alt="LinkedIn Icon" class="icon">
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/racinefe" target="_blank" class="modern-button">
+              <img src="assets/icons/botoes/github-brands.svg" alt="GitHub Icon" class="icon">
+              <span>GitHub</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="contact-card">
+      <img src="assets/icons/whathsapp.svg" alt="WhatsApp" class="contact-icon">
+      <div class="contact-info">
+        <strong>WhatsApp</strong>
+        <p>(21) 9 7350-0716</p>
+        <a href="https://api.whatsapp.com/send?phone=5521973500716&text=ol%c3%A1%20Racine, %20Eu%20Sou%20"
+           target="_blank"
+           class="contact-link">Enviar mensagem</a>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <img src="assets/icons/email.svg" alt="E-mail" class="contact-icon">
+      <div class="contact-info">
+        <strong>E-mail</strong>
+        <p>racine.fell&#64;gmail.com</p>
+        <a href="mailto:racine.fell@gmail.com"
+           target="_blank"
+           class="contact-link">Enviar e-mail</a>
+      </div>
+    </div>
+  </div>
+</header>

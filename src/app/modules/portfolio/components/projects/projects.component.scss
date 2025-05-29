@@ -1,74 +1,133 @@
-.container-cards {
-  text-align: center;
-  padding: 2rem;
-}
+.projects-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
 
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
 
-.container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
 
-.list-cards {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  gap: 15px;
-}
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #4299e1;
+        border-radius: 3px;
+      }
+    }
 
-.card {
-  width: 250px; /* Define um tamanho fixo para os cards */
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+    .section-subtitle {
+      color: #4a5568;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
 
-  &:hover {
-    transform: scale(1.05);
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+        .project-overlay {
+          opacity: 1;
+        }
+      }
+
+      .project-image-container {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+
+        .project-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .project-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(66, 153, 225, 0.8);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+
+          .view-project {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .project-info {
+        padding: 1.5rem;
+
+        .project-title {
+          font-size: 1.25rem;
+          color: #2d3748;
+          margin: 0 0 1rem 0;
+        }
+
+        .project-actions {
+          display: flex;
+          gap: 0.75rem;
+
+          .project-link {
+            padding: 0.5rem 1rem;
+            background: #4299e1;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+
+            &:hover {
+              background: #2b6cb0;
+            }
+          }
+        }
+      }
+    }
   }
 }
-
-.btn {
-  width: 100%;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.card-img-top {
-  width: 100%; /* Ajusta a largura da imagem para preencher o card */
-  height: 150px; /* Define uma altura padrão para as imagens */
-  object-fit: cover; /* Mantém a proporção da imagem sem deformá-la */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.card-body {
-  padding: 10px;
-  text-align: center;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
 
 @media (max-width: 768px) {
-  .card {
-    width: 200px;
-  }
-  .card-img-top {
-    height: 120px;
+  .projects-section {
+    padding: 0 1rem;
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

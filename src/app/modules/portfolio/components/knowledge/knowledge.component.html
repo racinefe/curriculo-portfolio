@@ -1,19 +1,31 @@
-<div class="container-knoledge">
-    <h2>Conhecimentos</h2>
-    <ul>
-        @for (item of arrayKnowledge(); track item) {
-            <li class="knoledge">
-                <img 
-                    [src]="item.src"
-                    [alt]="item.alt"
-                    loading="lazy"
-                    width="32px"
-                    height="40px"
-                />
-                <mat-progress-bar mode="buffer" [value]="item.progress"></mat-progress-bar>
-            </li>
-            
-        }
-        
-    </ul>
-</div>
+<section class="knowledge-section">
+  <div class="section-header">
+    <h2 class="section-title">Conhecimentos & Habilidades</h2>
+    <p class="section-subtitle">Tecnologias que domino e estou aprendendo</p>
+  </div>
+
+  <div class="skills-grid">
+    @for (item of arrayKnowledge(); track item) {
+      <div class="skill-card">
+        <div class="skill-header">
+          <img
+            [src]="item.src"
+            [alt]="item.alt"
+            loading="lazy"
+            class="skill-icon"
+          />
+          <span class="skill-name">{{ getSkillName(item.alt) }}</span>
+        </div>
+
+        <div class="progress-container">
+          <mat-progress-bar
+            mode="determinate"
+            [value]="item.progress"
+            class="skill-progress"
+          ></mat-progress-bar>
+          <span class="progress-value">{{ item.progress }}%</span>
+        </div>
+      </div>
+    }
+  </div>
+</section>

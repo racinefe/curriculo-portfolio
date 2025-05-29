@@ -1,13 +1,12 @@
 import { Component, signal } from '@angular/core';
-// Interface
 import { Iknowledge } from '../../interface/iknowledge.interface';
-// Angular Material
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-knowledge',
   standalone: true,
-  imports: [MatProgressBarModule],
+  imports: [MatProgressBarModule, CommonModule],
   templateUrl: './knowledge.component.html',
   styleUrls: ['./knowledge.component.scss']
 })
@@ -44,4 +43,9 @@ export class KnowledgeComponent {
       progress: 35
     }
   ]);
+
+  getSkillName(altText: string): string {
+    // Extrai o nome da tecnologia do texto alternativo
+    return altText.replace('Ícone do ', '').replace('Ícone de ', '');
+  }
 }

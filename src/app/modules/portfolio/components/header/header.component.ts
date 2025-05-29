@@ -1,18 +1,19 @@
 import { Component, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [MatCardModule,],
+  imports: [MatCardModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 export class HeaderComponent implements AfterViewInit {
-  longText = `Olá! Eu sou Racine Fellipe, um desenvolvedor de software, apaixonado por tecnologia e sempre em busca de aprender mais.
-              Minha jornada na programação começou recentemente, mas já adquiri conhecimento em várias áreas do desenvolvimento Font-end e back-end.`;
+  longText = `Sou desenvolvedor com grande entusiasmo por tecnologia e constante busca por evolução profissional.
+              Com sólida experiência em diversas áreas do desenvolvimento Front-end e Back-end,
+                sempre com foco em criar soluções eficientes e bem estruturadas.`;
+
   ngAfterViewInit() {
     this.startTypingAnimation();
   }
@@ -21,32 +22,37 @@ export class HeaderComponent implements AfterViewInit {
     const nameElement = document.querySelector<HTMLElement>('.animated-name');
 
     if (nameElement) {
-      const fullName = ' ';
-      const originalText = fullName.split(' ')[1] + 'Software Developer</>'; // Acrescentar texto depois de 'Fellipe'
-      nameElement.textContent = fullName.split('')[0] + ' Olá, eu Sou Racine Felipe, '; // Acrescentar texto depois de 'Racine '
+      const greetings = "Olá, eu sou Racine Fellipe";
+      const role = "Software Developer " ;
 
       let currentIndex = 0;
+      let isTypingGreetings = true;
 
       const type = () => {
-        if (currentIndex < originalText.length) {
-          nameElement.textContent = (nameElement.textContent ?? '') + originalText.charAt(currentIndex);
+        if (isTypingGreetings && currentIndex < greetings.length) {
+          nameElement.textContent = (nameElement.textContent || '') + greetings.charAt(currentIndex);
           currentIndex++;
-          setTimeout(type, 200);
+          setTimeout(type, 100);
+        } else if (isTypingGreetings) {
+          isTypingGreetings = false;
+          currentIndex = 0;
+          setTimeout(() => {
+            nameElement.textContent = '';
+            setTimeout(type, 500);
+          }, 2000);
+        } else if (currentIndex < role.length) {
+          nameElement.textContent = (nameElement.textContent || '') + role.charAt(currentIndex);
+          currentIndex++;
+          setTimeout(type, 100);
         } else {
-          setTimeout(erase, 1200);
+          setTimeout(() => {
+            nameElement.textContent = '';
+            currentIndex = 0;
+            isTypingGreetings = true;
+            setTimeout(type, 500);
+          }, 3000);
         }
       };
-
-      const erase = () => {
-        if (currentIndex > 0) {
-          nameElement.textContent = (nameElement.textContent ?? '').slice(0, -1);
-          currentIndex--;
-          setTimeout(erase, 200);
-        } else {
-          setTimeout(type, 1200);
-        }
-      };
-
 
       type();
     }

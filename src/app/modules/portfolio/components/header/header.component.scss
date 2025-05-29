@@ -1,174 +1,186 @@
-/* Estilos básicos */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
-  text-align: center;
-}
-
-header {
+.modern-header {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap; /* Permite quebra em telas menores */
-  text-align: center;
-}
+  gap: 2rem;
+  padding: 0.5rem;
+  max-width: 1500px;
+  width: 1300px;
 
-header img {
-  border-radius: 0 20%;
-  border: 5px solid rgb(206, 204, 204);
-  margin: 15px;
-  transition: transform 0.7s;
-
-}
-
-header img:hover {
-  transform: scale(1.09);
-  background-color: rgb(134, 133, 133);
-}
-
-header h1 {
-  font-size: 2em;
-  flex: 1; /* Ajusta o tamanho para ocupar espaço proporcional */
-}
-
-header .animated-name {
-  display: inline-block;
-  width: 33rem;
-  white-space: wrap;
-  overflow: hidden;
-
-  font-size: 35px;
-  font-family: monospace;
-  animation: typing 4s steps(10) 1s forwards, blink-caret 0.75s step-end infinite;
-}
-
-aside .containe {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza os itens */
-}
-
-aside .box-info {
   margin: 0 auto;
-  padding: 32px 16px;
-  text-align: center;
-}
+  align-items: flex-start;
 
-aside .box-info nav ul {
-  display: flex;
-  flex-direction: row;
-  //flex-wrap: wrap; /* Permite quebra de linha */
-  justify-content: space-around;
-  padding: 0;
-  a{
-    text-decoration: none;
-    font-size: 15px;
-    color: rgb(134, 133, 133);
+  .profile-section {
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2d3748;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
-}
-
-aside .box-info nav ul li {
-  margin: 8px; /* Espaçamento entre itens */
-  display: flex;
-  justify-content: space-between;
-  img{
-    max-width: 25px;
-
-  }
-}
-
-aside section {
-  display: flex;
-  align-items: center; /* Centraliza os itens */
-
-  a{
-    text-decoration: none;
-    font-size: 15px;
-    color: rgb(134, 133, 133);
-  }
-}
-
-aside section figure {
-
-  align-items: center;
-  margin: 25px;
-}
-aside .box-info  li{
-  transition: transform 0.7s;
-
-}
-aside .box-info  li:hover {
-  transform: scale(1.09);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column; /* Muda para empilhar elementos */
+  .icon2 {
+    width: 20px;
+    height: 20px;
   }
 
-  header img {
-    width: 150px;
-    height: 150px;
-  }
-
-  aside .box-info {
-    padding: 16px;
-  }
-
-  aside .box-info nav  {
-    flex-direction: column; /* Itens em coluna para dispositivos menores */
-    align-items: center;
-  }
-
-  aside .box-info nav ul li {
-
-    margin: 5px 0;
-  }
-
-  aside section {
+  .info-section {
+    flex: 1;
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    gap: 1.5rem;
+
+    .text-content {
+      .animated-name {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 0.5rem;
+        min-height: 3rem;
+      }
+
+      .location {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 1rem;
+      }
+
+      .bio {
+        color: #4a5568;
+        line-height: 1.6;
+        max-width: 600px;
+        text-align: start;
+        font-size: 1.1rem;
+      }
+    }
+
+    .buttons-section {
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          a.modern-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: #2d3748;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+              background: #4a5568;
+              transform: translateY(-2px);
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .icon {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
   }
 
-  aside section figure {
-    width: 100%;
-  }
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 250px;
 
-  aside .box-info  ul{
+    .contact-card {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .contact-icon {
+        width: 24px;
+        height: 24px;
+        align-self: center;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+
+        strong {
+          font-size: 0.9rem;
+          color: #2d3748;
+        }
+
+        p {
+          margin: 0.25rem 0;
+          font-size: 0.9rem;
+          color: #4a5568;
+        }
+
+        .contact-link {
+          font-size: 0.8rem;
+          color: #4299e1;
+          text-decoration: none;
+          margin-top: 0.25rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .modern-header {
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 
+    .info-section {
+      align-items: center;
 
+      .button-grid {
+        width: 100%;
+      }
+    }
+
+    .contact-section {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
-
-  header .animated-name {
-    width: 55vh;
-    font-size: 25px;
 }
 
-}
+@media (max-width: 640px) {
+  .modern-header {
+    padding: 1rem;
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em; /* Reduz o tamanho do título */
-  }
-
-  aside .box-info {
-    font-size: 0.9em; /* Ajusta tamanho da fonte */
-
-  }
-
-  aside .box-info nav ul li a {
-    font-size: 0.8em; /* Ajusta tamanho da fonte dos links */
-}
-
-
-  aside section figure {
-    margin: 5px 0; /* Reduz margens */
+    .contact-section {
+      flex-direction: column;
+    }
   }
 }

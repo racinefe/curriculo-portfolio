@@ -1,22 +1,40 @@
+<section class="projects-section">
+  <div class="section-header">
+    <h2 class="section-title">Projetos Desenvolvidos</h2>
+    <p class="section-subtitle">Alguns dos meus trabalhos e experimentos</p>
+  </div>
 
-<div class="container-cards">
-    <h2>Projetos Desenvolvidos</h2>
-    <div class=" container ">
-        <li>
-            <div class="list-cards row">
-                @for (item of arrayProjects(); track item) {
-                <div class="card col-6 col-sm-4" style="width: 18rem;">
-                    <button class="btn" (click)="openDialog(item)">
-                        <img class="card-img-top" [src]="item.src" [alt]="item.alt" [attr.width]="item.with"
-                            [attr.height]="item.height" loading="lazy" />
+  <div class="projects-grid">
+    @for (item of arrayProjects(); track item) {
+      <div class="project-card" (click)="openDialog(item)">
+        <div class="project-image-container">
+          <img
+            [src]="item.src"
+            [alt]="item.alt"
+            loading="lazy"
+            class="project-image"
+          />
+          <div class="project-overlay">
+            <span class="view-project">Ver detalhes</span>
+          </div>
+        </div>
 
-                        <div class="card-body">
-                            <h2 class="card-title">{{ item.title }}</h2>
-                        </div>
-                    </button>
-                </div>
-                }
-            </div>
-        </li>
-    </div>
-</div>
+        <div class="project-info">
+          <h3 class="project-title">{{ item.title }}</h3>
+          <div class="project-actions">
+            @for (link of item.links; track link) {
+              <a
+                [href]="link.href"
+                target="_blank"
+                class="project-link"
+                (click)="$event.stopPropagation()"
+              >
+                {{ link.name }}
+              </a>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

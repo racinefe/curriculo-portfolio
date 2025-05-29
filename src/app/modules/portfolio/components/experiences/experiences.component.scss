@@ -1,111 +1,224 @@
-:host {
-  margin: 25px auto 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-width: 900px;
-  padding: 0 20px;
+.experiences-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #4299e1;
+        border-radius: 3px;
+      }
+    }
+
+    .section-subtitle {
+      color: #4a5568;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 2rem;
+
+      .timeline-marker {
+        position: relative;
+        flex-shrink: 0;
+        width: 24px;
+        margin-right: 1.5rem;
+
+        .timeline-dot {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background: #4299e1;
+          border: 4px solid white;
+          box-shadow: 0 0 0 2px #4299e1;
+          z-index: 1;
+          position: relative;
+        }
+
+        .timeline-line {
+          position: absolute;
+          left: 50%;
+          top: 24px;
+          bottom: -2rem;
+          width: 2px;
+          background: #e2e8f0;
+          transform: translateX(-50%);
+        }
+      }
+
+      .timeline-content {
+        flex-grow: 1;
+        padding-bottom: 2rem;
+
+        .experience-card {
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          overflow: hidden;
+          transition: all 0.3s ease;
+
+          &:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+          }
+
+          .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            cursor: pointer;
+            background: #f8fafc;
+
+            .job-title {
+              font-size: 1.25rem;
+              font-weight: 600;
+              color: #2d3748;
+              margin: 0;
+            }
+
+            .job-meta {
+              display: flex;
+              flex-direction: column;
+
+              .company {
+                font-weight: 500;
+                color: #4a5568;
+              }
+
+              .date {
+                font-size: 0.9rem;
+                color: #718096;
+              }
+            }
+
+            .toggle-icon {
+              transition: transform 0.3s ease;
+
+              svg {
+                color: #4a5568;
+              }
+            }
+          }
+
+          .experience-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+
+            .experience-text {
+              padding: 0 1.5rem;
+
+              p, ul {
+                color: #4a5568;
+                line-height: 1.6;
+              }
+
+              ul {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+
+                li {
+                  margin-bottom: 0.5rem;
+                  position: relative;
+
+                  &::before {
+                    content: '•';
+                    color: #4299e1;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                  }
+                }
+              }
+            }
+          }
+
+          &.active {
+            .experience-header {
+              .toggle-icon {
+                transform: rotate(180deg);
+              }
+            }
+
+            .experience-details {
+              max-height: 1000px;
+              padding: 1.5rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-details {
-  width: 100%;
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  overflow: hidden;
-  margin-top: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-summary,
-article {
-  padding: 15px 20px;
-  transition: 500ms;
-}
-
-summary {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--primary);
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-
-}
-
-summary:hover {
-  background: darkgray;
-  color: aliceblue;
-}
-
-summary p {
-  font-size: 14px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-summary::after {
-  content: "";
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-details[open] summary::after {
-  background-image: url("../../../../../assets/icons/chevron-up.svg");
-}
-
-details:not([open]) summary::after {
-  background-image: url("../../../../../assets/icons/chevron-down.svg");
-}
-article{
-  text-align: left;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-  :host {
-    padding: 0 15px;
-  }
+  .experiences-section {
+    padding: 0 1rem;
+    margin: 2rem auto;
 
-  h2 {
-    font-size: 1.8rem;
-  }
+    .timeline {
+      .timeline-item {
+        flex-direction: column;
 
-  details {
-    max-width: 100%;
-  }
+        .timeline-marker {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
 
-  summary {
-    font-size: 1rem;
-  }
-}
+          .timeline-dot {
+            margin-right: 1rem;
+          }
 
-@media (max-width: 480px) {
-  h2 {
-    font-size: 1.5rem;
-  }
+          .timeline-line {
+            display: none;
+          }
+        }
 
-  summary {
-    font-size: 0.9rem;
-    padding: 12px;
+        .timeline-content {
+          padding-bottom: 0;
+
+          .experience-card {
+            .experience-header {
+              flex-wrap: wrap;
+              gap: 0.5rem;
+
+              .job-title {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
