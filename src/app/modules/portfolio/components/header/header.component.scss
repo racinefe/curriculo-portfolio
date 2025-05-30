@@ -1,9 +1,10 @@
 .modern-header {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
   padding: 0.5rem;
   max-width: 1500px;
-  width: 1300px;
+  width: 100%;
 
   margin: 0 auto;
   align-items: flex-start;
@@ -178,9 +179,53 @@
 @media (max-width: 640px) {
   .modern-header {
     padding: 1rem;
+    gap: 1.5rem;
+
+    .profile-section {
+      .profile-image {
+        width: 180px;
+        height: 180px;
+      }
+    }
+
+    .info-section {
+      gap: 1rem;
+
+      .text-content {
+        .animated-name {
+          font-size: 1.75rem;
+          min-height: unset;
+        }
+
+        .bio {
+          font-size: 1rem;
+          text-align: center;
+          max-width: 100%;
+        }
+
+        .location {
+          font-size: 0.95rem;
+        }
+      }
+
+      .buttons-section {
+        .button-grid {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+      }
+    }
 
     .contact-section {
       flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .contact-card {
+        width: 100%;
+        max-width: 320px;
+      }
     }
   }
 }
+
