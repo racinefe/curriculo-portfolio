@@ -166,6 +166,28 @@ export class ProjectsComponent {
         },
       ],
     },
+    {
+      src: 'assets/img/projects/crud-com-springBoot-e-java/crud-com-springBoot-e-java.gif',
+      alt: '[ CRUD ] - SpringBoot e java',
+      title: '[ CRUD ] - SpringBoot e java',
+      with: '200px',
+      height:'130px',
+
+      description: `
+
+                    <p>Este projeto é uma aplicação de estudo para desenvolvimento em Back-end
+                     desenvolvida com Java e framework Spring Boot
+                     que consiste em um CRUD para registro de Usuarios com dados como Nome, Idade e E-mail.
+                    </p>
+                    <p>Tecnologias utilizadas - Java | SpringBoot</p>
+                   `,
+      links: [
+        {
+          name: 'Conheça o Projeto',
+          href: 'https://github.com/racinefe/crud-com-springBoot-e-java',
+        },
+      ],
+    },
   ]);
 
   public openDialog(data: IProjects){
