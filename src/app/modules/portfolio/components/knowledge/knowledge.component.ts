@@ -30,7 +30,7 @@ export class KnowledgeComponent {
     {
       src: 'assets/icons/knowledge/react.svg',
       alt: 'Ícone do React',
-      progress: 35
+      progress: 43
     },
     {
       src: 'assets/icons/knowledge/angular.svg',
@@ -40,7 +40,12 @@ export class KnowledgeComponent {
     {
       src: 'assets/icons/knowledge/java.svg',
       alt: 'Ícone do Java',
-      progress: 35
+      progress: 38
+    },
+     {
+      src: 'assets/icons/knowledge/ionic.svg',
+      alt: 'Ícone do Ionic',
+      progress: 25
     }
   ]);
 
