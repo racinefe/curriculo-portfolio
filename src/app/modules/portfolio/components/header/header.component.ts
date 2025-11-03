@@ -11,8 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class HeaderComponent implements AfterViewInit {
   longText = `Sou desenvolvedor com grande entusiasmo por tecnologia e constante busca por evolução profissional.
-              Com sólida experiência em diversas áreas do desenvolvimento Front-end e Back-end,
-                sempre com foco em criar soluções eficientes e bem estruturadas.`;
+              Com sólida experiência em diversas áreas do desenvolvimento Full stack, Proficiente em Java e Angular, visando contribuindo para a inovação e crescimento.`;
 
   ngAfterViewInit() {
     this.startTypingAnimation();
@@ -22,8 +21,8 @@ export class HeaderComponent implements AfterViewInit {
     const nameElement = document.querySelector<HTMLElement>('.animated-name');
 
     if (nameElement) {
-      const greetings = "Olá, eu sou Racine Fellipe";
-      const role = "Software Developer " ;
+      const greetings = "Olá, eu sou Racine";
+      const role = "Full stack Developer " ;
 
       let currentIndex = 0;
       let isTypingGreetings = true;
