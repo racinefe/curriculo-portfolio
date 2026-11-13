@@ -2,132 +2,96 @@
   max-width: 1200px;
   margin: 4rem auto;
   padding: 0 2rem;
+}
 
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #2d3748;
-      margin-bottom: 0.5rem;
-      position: relative;
-      display: inline-block;
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 3px;
-        background: #4299e1;
-        border-radius: 3px;
-      }
-    }
+.project-trigger {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
 
-    .section-subtitle {
-      color: #4a5568;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
-  }
+.project-image-container {
+  display: block;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #edf2f7;
+}
 
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-    .project-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      cursor: pointer;
+.project-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  padding-top: 0.15rem;
+}
 
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+.project-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+}
 
-        .project-overlay {
-          opacity: 1;
-        }
-      }
+.project-hint {
+  font-size: 0.85rem;
+  color: #4a5568;
+}
 
-      .project-image-container {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
+.project-link {
+  align-self: flex-start;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: #2b6cb0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-        .project-image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease;
-        }
-
-        .project-overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(66, 153, 225, 0.8);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-
-          .view-project {
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-          }
-        }
-      }
-
-      .project-info {
-        padding: 1.5rem;
-
-        .project-title {
-          font-size: 1.25rem;
-          color: #2d3748;
-          margin: 0 0 1rem 0;
-        }
-
-        .project-actions {
-          display: flex;
-          gap: 0.75rem;
-
-          .project-link {
-            padding: 0.5rem 1rem;
-            background: #4299e1;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-
-            &:hover {
-              background: #2b6cb0;
-            }
-          }
-        }
-      }
-    }
-  }
+.project-link:hover {
+  color: #2d3748;
 }
 
 @media (max-width: 768px) {
   .projects-section {
     padding: 0 1rem;
+  }
 
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image-container {
+    height: 200px;
   }
 }

@@ -162,11 +162,6 @@
     &:hover {
       color: #4299e1;
       background: rgba(66, 153, 225, 0.1);
-      transform: translateX(5px);
-
-      @media (max-width: 992px) {
-        transform: none;
-      }
     }
 
     &.active {
