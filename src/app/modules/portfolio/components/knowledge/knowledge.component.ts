@@ -1,56 +1,49 @@
 import { Component, signal } from '@angular/core';
 import { Iknowledge } from '../../interface/iknowledge.interface';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-knowledge',
   standalone: true,
-  imports: [MatProgressBarModule, CommonModule],
+  imports: [],
   templateUrl: './knowledge.component.html',
   styleUrls: ['./knowledge.component.scss']
 })
 export class KnowledgeComponent {
   public arrayKnowledge = signal<Iknowledge[]>([
     {
+      nome: 'HTML',
       src: 'assets/icons/knowledge/html5.svg',
-      alt: 'Ícone do html5',
-      progress: 80
+      alt: 'Ícone do HTML'
     },
     {
+      nome: 'Sass',
       src: 'assets/icons/knowledge/sass.svg',
-      alt: 'Ícone do sass',
-      progress: 70
+      alt: 'Ícone do Sass'
     },
     {
+      nome: 'JavaScript',
       src: 'assets/icons/knowledge/javascript.svg',
-      alt: 'Ícone do JavaScript',
-      progress: 80
+      alt: 'Ícone do JavaScript'
     },
     {
-      src: 'assets/icons/knowledge/react.svg',
-      alt: 'Ícone do React',
-      progress: 43
-    },
-    {
+      nome: 'Angular',
       src: 'assets/icons/knowledge/angular.svg',
-      alt: 'Ícone do Angular',
-      progress: 75
+      alt: 'Ícone do Angular'
     },
     {
+      nome: 'Java',
       src: 'assets/icons/knowledge/java.svg',
-      alt: 'Ícone do Java',
-      progress: 38
+      alt: 'Ícone do Java'
     },
-     {
+    {
+      nome: 'React',
+      src: 'assets/icons/knowledge/react.svg',
+      alt: 'Ícone do React'
+    },
+    {
+      nome: 'Ionic',
       src: 'assets/icons/knowledge/ionic.svg',
-      alt: 'Ícone do Ionic',
-      progress: 25
+      alt: 'Ícone do Ionic'
     }
   ]);
-
-  getSkillName(altText: string): string {
-    // Extrai o nome da tecnologia do texto alternativo
-    return altText.replace('Ícone do ', '').replace('Ícone de ', '');
-  }
 }

@@ -1,11 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { IExperiences } from '../../interface/IExperiences.interface';
 
 @Component({
   selector: 'app-experiences',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.scss']
 })

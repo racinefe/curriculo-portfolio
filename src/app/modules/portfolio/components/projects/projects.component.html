@@ -1,40 +1,41 @@
 <section class="projects-section">
-  <div class="section-header">
-    <h2 class="section-title">Projetos Desenvolvidos</h2>
-    <p class="section-subtitle">Alguns dos meus trabalhos e experimentos</p>
-  </div>
+  <header class="section-header">
+    <h2 class="section-title">Projetos</h2>
+  </header>
 
-  <div class="projects-grid">
-    @for (item of arrayProjects(); track item) {
-      <div class="project-card" (click)="openDialog(item)">
-        <div class="project-image-container">
-          <img
-            [src]="item.src"
-            [alt]="item.alt"
-            loading="lazy"
-            class="project-image"
-          />
-          <div class="project-overlay">
-            <span class="view-project">Ver detalhes</span>
-          </div>
-        </div>
+  <ul class="projects-grid">
+    @for (item of arrayProjects(); track item.title) {
+      <li class="project-card">
+        <button
+          type="button"
+          class="project-trigger"
+          (click)="openDialog(item)"
+        >
+          <span class="project-image-container">
+            <img
+              [src]="item.src"
+              alt=""
+              loading="lazy"
+              class="project-image"
+            />
+          </span>
+          <span class="project-info">
+            <span class="project-title">{{ item.title }}</span>
+            <span class="project-hint">Ver detalhes</span>
+          </span>
+        </button>
 
-        <div class="project-info">
-          <h3 class="project-title">{{ item.title }}</h3>
-          <div class="project-actions">
-            @for (link of item.links; track link) {
-              <a
-                [href]="link.href"
-                target="_blank"
-                class="project-link"
-                (click)="$event.stopPropagation()"
-              >
-                {{ link.name }}
-              </a>
-            }
-          </div>
-        </div>
-      </div>
+        @for (link of item.links; track link.href) {
+          <a
+            [href]="link.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-link"
+          >
+            {{ link.name }}
+          </a>
+        }
+      </li>
     }
-  </div>
+  </ul>
 </section>

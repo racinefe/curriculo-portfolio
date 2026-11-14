@@ -1,5 +1,5 @@
-export interface Iknowledge{
-    src: string;
-    alt:string;
-    progress: number;
+export interface Iknowledge {
+  nome: string;
+  src: string;
+  alt: string;
 }
