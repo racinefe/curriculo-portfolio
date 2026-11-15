@@ -49,7 +49,7 @@ export class ProjectsComponent {
       height:'130px',
       description: `
                     <p>Projeto Full Stack de matrícula, utilizando o Firebase como banco de dados para armazenamento,
-                       o projeto possui todas as funcionalidades de um GRUD (create, read, update e delete).
+                       o projeto possui todas as funcionalidades de um CRUD (create, read, update e delete).
                     </p>
 
                     <p>Tecnologias utilizadas - HTML| CSS |JavaScript | React.js | Vite | Node.js</p>
@@ -68,7 +68,7 @@ export class ProjectsComponent {
       with: '230px',
       height:'130px',
       description: `
-                    <p>Projeto web, onde criei um to-do list, o projeto possui todas as funcionalidades do GRUD (create, read, update e delete),
+                    <p>Projeto web, onde criei um to-do list, o projeto possui todas as funcionalidades do CRUD (create, read, update e delete),
                        além de um checklist interativo.
                     </p>
                     <p>Tecnologias utilizadas - HTML| CSS |JavaScript </p>
