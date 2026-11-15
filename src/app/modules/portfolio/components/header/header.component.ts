@@ -10,8 +10,7 @@ import { MatCardModule } from '@angular/material/card';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements AfterViewInit {
-  longText = `Sou desenvolvedor com grande entusiasmo por tecnologia e constante busca por evolução profissional.
-              Com sólida experiência em diversas áreas do desenvolvimento Full stack, Proficiente em Java e Angular, visando contribuindo para a inovação e crescimento.`;
+  longText = `Desenvolvedor Full Stack com formação em Análise e Desenvolvimento de Sistemas e atuação no ciclo completo de desenvolvimento de software com Java, Spring Boot, Angular e Ionic. Experiência na arquitetura e sustentação de sistemas, com forte domínio em integração de serviços, regras de negócio, bancos de dados relacionais e controle de acesso.`;
 
   ngAfterViewInit() {
     const nameElement = document.querySelector<HTMLElement>('.animated-name');
